@@ -11,42 +11,16 @@ export interface Project {
   repoLink?: string;
 }
 
+
 export const projectsData: Project[] = [
+
   {
     id: "project-1",
-    title: "Poetry Platform",
-    description: "A web application for poets to share their work, discover new poetry, and connect with a community of writers. Features user authentication and content management.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageAiHint: "poetry community",
-    technologies: ["Next.js", "React", "Firebase", "Tailwind CSS"],
-    liveLink: "#",
-  
-  },
-  {
-    id: "project-2",
-    title: "MindWell Journal",
-    description: "A digital journaling app focused on mental well-being, incorporating principles from psychology. Users can track moods, write entries, and set mindfulness goals.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageAiHint: "mindfulness journal",
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
-    liveLink: "#",
-  },
-  {
-    id: "project-3",
-    title: "Philosopher's Forum",
-    description: "An online forum for discussing philosophical ideas and texts. Includes threaded discussions, user profiles, and moderation tools.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageAiHint: "debate forum",
-    technologies: ["Node.js", "SQL", "Handlebars.js", "Socket.io"],
-    liveLink: "#",
-  },
-  {
-    id: "project-4",
     title: "Portfolio Website V1",
     description: "My first personal portfolio website, built to showcase early projects and skills in web development. Focused on clean design and responsiveness.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
-    liveLink: "#",
+    liveLink: "https://iamsamuel.vercel.app/",
   },
 ];
