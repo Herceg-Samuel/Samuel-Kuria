@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,18 +8,18 @@ interface Skill {
 }
 
 const skillsList: Skill[] = [
-  { name: "React" },
+  { name: "FastAPI" },
+  { name: "Figma" },
+  { name: "Git" },
+  { name: "JavaScript" },
+  { name: "MongoDB" },
   { name: "Next.js" },
-  { name: "Tailwind CSS" },
-  { name: "JavaScript"  },
-  { name: "TypeScript" },
   { name: "Node.js" },
-  { name: "MongoDB"},
+  { name: "Python" },
+  { name: "React" },
   { name: "SQL" },
-  { name: "Git"},
-  { name: "Firebase" },
-  { name: "Framer Motion" },
-  { name: "Genkit" },
+  { name: "Tailwind CSS" },
+  { name: "TypeScript" },
 ];
 
 const sectionVariants = {
@@ -70,7 +69,9 @@ export function SkillsSection() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">My Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary">
+            My Skills
+          </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
             Technologies and tools I work with.
           </p>
@@ -92,9 +93,10 @@ export function SkillsSection() {
             >
               <div className="flex items-center mb-2">
                 <Zap size={22} className="text-accent mr-3 flex-shrink-0" />
-                <h3 className="text-xl font-semibold text-primary">{skill.name}</h3>
+                <h3 className="text-xl font-semibold text-primary">
+                  {skill.name}
+                </h3>
               </div>
-
             </motion.div>
           ))}
         </motion.div>
