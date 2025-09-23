@@ -69,4 +69,15 @@ export const projectsData: Project[] = [
     liveLink:
       "https://www.figma.com/proto/w9iOtcsFFaIRQuLHO2ojzB/WEBSITE?page-id=0%3A1&node-id=15-4&p=f&viewport=65%2C479%2C0.21&t=ssyPMB9nrmSpOoCW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A4",
   },
+  {
+    id: "project-6",
+    title: "Find Movies App",
+    description:
+      "This is a movie search app. It allows users to search for movies, view details, and see ratings. It provides you with the latest on movies and series that you love. The app features a clean UI and responsive design. (I just love movies and series🍿)",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["Figma", "UI/UX Design"],
+    liveLink: "https://find-movies-omega.vercel.app/",
+  },
 ];
