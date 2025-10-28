@@ -92,7 +92,7 @@ export const projectsData: Project[] = [
     liveLink: "https://chefdelight.vercel.app/",
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "African Math Heritage",
     description:
       "A true African showcasing of our heritage. Inspired by the unit Africa's contribution to Film and Mathematics. This interactive experience explores the deep connection between mathematics and African culture. Discover how mathematical ideas are woven into our traditional games, art, and history.",
@@ -103,7 +103,7 @@ export const projectsData: Project[] = [
     liveLink: "https://africanmathematicalgenius.netlify.app/",
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "Class Portfolio",
     description:
       "This is a class project portfolio. Simple, mininalistic and fun.",
