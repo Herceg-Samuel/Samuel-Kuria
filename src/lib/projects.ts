@@ -80,4 +80,37 @@ export const projectsData: Project[] = [
     technologies: ["React", "TailwindCSS", "API"],
     liveLink: "https://find-movies-omega.vercel.app/",
   },
+  {
+    id: "project-7",
+    title: "Chef Delight",
+    description:
+      "A one stop recipe recommendation from the finest models. Never get stuck about what to cook. Give us your ingridients, get your meal.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["React", "TailwindCSS", "hugging face models"],
+    liveLink: "https://chefdelight.vercel.app/",
+  },
+  {
+    id: "project-7",
+    title: "African Math Heritage",
+    description:
+      "A true African showcasing of our heritage. Inspired by the unit Africa's contribution to Film and Mathematics. This interactive experience explores the deep connection between mathematics and African culture. Discover how mathematical ideas are woven into our traditional games, art, and history.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["HTML", "Javascript", "CSS"],
+    liveLink: "https://africanmathematicalgenius.netlify.app/",
+  },
+  {
+    id: "project-8",
+    title: "Class Portfolio",
+    description:
+      "This is a class project portfolio. Simple, mininalistic and fun.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["HTML", "Javascript", "CSS"],
+    liveLink: "https://portfoliohtml-iota.vercel.app/",
+  },
 ];
