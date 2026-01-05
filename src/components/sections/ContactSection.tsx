@@ -134,38 +134,38 @@ export function ContactSection() {
             </div>
             
             <div className="space-y-5">
-              <Link href="mailto:iamsamuelkuria@gmail.com" className="flex items-center space-x-3 group text-base md:text-lg transition-colors hover:text-accent">
-                <div className="p-2.5 bg-accent/10 rounded-full group-hover:bg-accent transition-colors">
-                  <Mail className="h-6 w-6 text-accent group-hover:text-accent-foreground transition-colors" />
+              <Link href="mailto:iamsamuelkuria@gmail.com" className="flex items-center space-x-3 group text-base md:text-lg transition-colors text-foreground hover:opacity-80">
+                <div className="p-2.5 bg-foreground text-background rounded-full group-hover:scale-110 transition-transform">
+                  <Mail className="h-6 w-6" />
                 </div>
-                <span>iamsamuelkuria@gmail.com</span>
+                <span className="font-medium">iamsamuelkuria@gmail.com</span>
               </Link>
               
-              <div className="flex items-center space-x-3 group text-base md:text-lg text-foreground/90">
-                 <div className="p-2.5 bg-muted/50 rounded-full">
-                  <Phone className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-3 group text-base md:text-lg text-foreground">
+                 <div className="p-2.5 bg-foreground text-background rounded-full">
+                  <Phone className="h-6 w-6" />
                 </div>
-                <span>+254711108263</span>
+                <span className="font-medium">+254711108263</span>
               </div>
 
               <div className="pt-2">
                 <p className="text-sm text-muted-foreground mb-3">Or connect on social media:</p>
                 <div className="flex items-center space-x-4 mt-2">
                   <Link href="https://www.linkedin.com/in/samuel-kuria-0594b7345" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="group">
-                    <div className="p-2.5 bg-accent/10 rounded-full group-hover:bg-accent transition-colors duration-200 ease-in-out transform group-hover:scale-110">
-                      <Linkedin className="h-6 w-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                    <div className="p-2.5 bg-foreground text-background rounded-full group-hover:scale-110 transition-transform duration-200 ease-in-out">
+                      <Linkedin className="h-6 w-6" />
                     </div>
                   </Link>
                   
                   <Link href="https://x.com/iamsamuelkuria" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Profile" className="group">
-                    <div className="p-2.5 bg-accent/10 rounded-full group-hover:bg-accent transition-colors duration-200 ease-in-out transform group-hover:scale-110">
-                      <Twitter className="h-6 w-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                    <div className="p-2.5 bg-foreground text-background rounded-full group-hover:scale-110 transition-transform duration-200 ease-in-out">
+                      <Twitter className="h-6 w-6" />
                     </div>
                   </Link>
 
                   <Link href="https://www.instagram.com/herceg_samuel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" className="group">
-                    <div className="p-2.5 bg-accent/10 rounded-full group-hover:bg-accent transition-colors duration-200 ease-in-out transform group-hover:scale-110">
-                      <Instagram className="h-6 w-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                    <div className="p-2.5 bg-foreground text-background rounded-full group-hover:scale-110 transition-transform duration-200 ease-in-out">
+                      <Instagram className="h-6 w-6" />
                     </div>
                   </Link>
                 </div>

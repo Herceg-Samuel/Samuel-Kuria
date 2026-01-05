@@ -15,11 +15,11 @@ import {
 } from "./ui/tooltip";
 
 const navItems = [
-  { name: "Home", href: "#home", icon: <HomeIcon size={18} /> },
-  { name: "About", href: "#about", icon: <UserCircle size={18} /> },
-  { name: "Skills", href: "#skills", icon: <Zap size={18} /> },
-  { name: "Projects", href: "#projects", icon: <Briefcase size={18} /> },
-  { name: "Contact", href: "#contact", icon: <Mail size={18} /> },
+  { name: "Home", href: "/#home", icon: <HomeIcon size={18} /> },
+  { name: "About", href: "/#about", icon: <UserCircle size={18} /> },
+  { name: "Skills", href: "/#skills", icon: <Zap size={18} /> },
+  { name: "Projects", href: "/#projects", icon: <Briefcase size={18} /> },
+  { name: "Contact", href: "/#contact", icon: <Mail size={18} /> },
 ];
 
 const menuVariants = {
@@ -47,13 +47,22 @@ const menuVariants = {
   }),
 };
 
+import { usePathname, useRouter } from "next/navigation";
+
+// ... (existing imports)
+
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
+      // Only scroll spy on home page
+      if (pathname !== "/") return;
+
+      const sections = navItems.map(item => item.href.replace("/#", ""));
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -70,16 +79,22 @@ export function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const targetId = href.substring(1);
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(targetId);
-      setIsMobileMenuOpen(false);
+    
+    if (pathname === "/") {
+       const targetId = href.replace("/#", "");
+       const element = document.getElementById(targetId);
+       if (element) {
+         element.scrollIntoView({ behavior: "smooth" });
+         setActiveSection(targetId);
+         setIsMobileMenuOpen(false);
+       }
+    } else {
+       router.push(href);
+       setIsMobileMenuOpen(false);
     }
   };
 
@@ -92,7 +107,11 @@ export function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <div className="flex h-20 items-center justify-between">
-          <Link href="#home" className="flex items-center space-x-2 text-2xl font-bold text-primary hover:text-accent transition-colors">
+          <Link 
+            href="/#home" 
+            onClick={(e) => handleNavClick(e, "/#home")}
+            className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-primary hover:text-accent transition-colors whitespace-nowrap"
+          >
             <MountainSnow className="h-8 w-8 text-primary" />
             <span>Samuel Kuria</span>
           </Link>
@@ -101,7 +120,7 @@ export function Header() {
             <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
               <TooltipProvider>
                 {navItems.map((item) => {
-                  const isActive = activeSection === item.href.substring(1);
+                  const isActive = activeSection === item.href.replace("/#", "") && pathname === "/";
                   return (
                     <Tooltip key={item.name}>
                       <TooltipTrigger asChild>
@@ -110,15 +129,15 @@ export function Header() {
                           onClick={(e) => handleNavClick(e, item.href)}
                           className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
                             isActive 
-                              ? "text-accent" 
-                              : "text-foreground hover:text-accent"
+                              ? "text-foreground" 
+                              : "text-muted-foreground hover:text-foreground"
                           }`}
                         >
                           <span className="flex items-center space-x-1.5">
                             {item.icon}
                             <span>{item.name}</span>
                           </span>
-                          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent transform ${
+                          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-foreground transform ${
                             isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                           } transition-transform duration-300 ease-out`}></span>
                         </Link>
@@ -149,7 +168,7 @@ export function Header() {
                   <div className="flex flex-col space-y-6 mt-8">
                     <AnimatePresence mode="wait">
                       {navItems.map((item, index) => {
-                        const isActive = activeSection === item.href.substring(1);
+                        const isActive = activeSection === item.href.replace("/#", "") && pathname === "/";
                         return (
                           <motion.div
                             key={item.name}

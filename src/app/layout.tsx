@@ -119,7 +119,7 @@ export default function RootLayout({
           })}
         </script>
       </head>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={`${inter.className}`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

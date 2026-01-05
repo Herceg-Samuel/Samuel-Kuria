@@ -89,7 +89,7 @@ export function SkillsSection() {
               key={skill.name}
               variants={skillCardVariants}
               custom={index} // Pass index to variants for custom delay
-              className="bg-card p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start"
+              className="bg-card p-4 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start"
             >
               <div className="flex items-center mb-2">
                 <Zap size={22} className="text-accent mr-3 flex-shrink-0" />
