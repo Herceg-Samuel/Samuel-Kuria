@@ -123,4 +123,28 @@ export const projectsData: Project[] = [
     technologies: ["HTML", "Javascript", "CSS"],
     liveLink: "https://portfoliohtml-iota.vercel.app/",
   },
+  {
+    id: "project-10",
+    slug: "the-oracle",
+    title: "The Oracle",
+    description:
+      "A text to speech application powered by the browser. Inspired by Wes Bos.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["React", "Javascript", "CSS"],
+    liveLink: "https://the-oracle-pink.vercel.app/",
+  },
+  {
+    id: "project-11",
+    slug: "the-voices",
+    title: "The Voices",
+    description:
+      "A text to speech web application powered by the browser. Inspired by Wes Bos.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["HTML", "Javascript", "CSS"],
+    liveLink: "https://thevoices-nine.vercel.app/",
+  },
 ];
