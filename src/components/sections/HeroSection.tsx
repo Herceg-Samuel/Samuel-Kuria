@@ -26,7 +26,6 @@ export function HeroSection() {
           </h1>
         </motion.div>
 
-        //TODO: Add typing effect with different words eg Software, poerty, etc
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
