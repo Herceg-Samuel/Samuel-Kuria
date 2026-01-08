@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BackToTop } from "@/components/ui/back-to-top";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -90,48 +91,51 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Samuel Kuria",
-            url: "https://samuel-kuria.vercel.app",
-            jobTitle: "Full-Stack Web Developer",
-            description:
-              "Full-stack web developer specializing in Next.js, React, Node.js and modern UI development.",
-            image: "https://samuel-kuria.vercel.app/og-image.webp",
-            sameAs: [
-              "https://www.linkedin.com/in/samuel-kuria-0594b7345/",
-              "https://x.com/iamsamuelkuria",
-              "https://github.com/Herceg-Samuel/",
-            ],
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Nairobi",
-              addressCountry: "KE",
-            },
-            worksFor: {
-              "@type": "Organization",
-              name: "Freelance",
-            },
-          })}
-        </script>
-      </head>
-      <body className={`${inter.className}`} suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ScrollProgress />
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <BackToTop />
-        </ThemeProvider>
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Samuel Kuria",
+              url: "https://samuel-kuria.vercel.app",
+              jobTitle: "Full-Stack Web Developer",
+              description:
+                "Full-stack web developer specializing in Next.js, React, Node.js and modern UI development.",
+              image: "https://samuel-kuria.vercel.app/og-image.webp",
+              sameAs: [
+                "https://www.linkedin.com/in/samuel-kuria-0594b7345/",
+                "https://x.com/iamsamuelkuria",
+                "https://github.com/Herceg-Samuel/",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Nairobi",
+                addressCountry: "KE",
+              },
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+            })}
+          </script>
+        </head>
+        <body className={`${inter.className}`} suppressHydrationWarning>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <ScrollProgress />
+            <Header />
+            <main className="min-h-screen">{children}</main>
+            <BackToTop />
+          </ThemeProvider>
+        </body>
+      </html>
+      <Analytics />
+    </>
   );
 }
