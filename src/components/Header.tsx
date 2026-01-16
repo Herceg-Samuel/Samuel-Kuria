@@ -2,7 +2,15 @@
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { HomeIcon, UserCircle, Briefcase, Mail, MountainSnow, Zap, Menu as MenuIcon } from "lucide-react";
+import {
+  HomeIcon,
+  UserCircle,
+  Briefcase,
+  Mail,
+  MountainSnow,
+  Zap,
+  Menu as MenuIcon,
+} from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
 import { useState, useEffect } from "react";
@@ -62,14 +70,17 @@ export function Header() {
       // Only scroll spy on home page
       if (pathname !== "/") return;
 
-      const sections = navItems.map(item => item.href.replace("/#", ""));
+      const sections = navItems.map((item) => item.href.replace("/#", ""));
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section);
             break;
           }
@@ -81,20 +92,23 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
-    
+
     if (pathname === "/") {
-       const targetId = href.replace("/#", "");
-       const element = document.getElementById(targetId);
-       if (element) {
-         element.scrollIntoView({ behavior: "smooth" });
-         setActiveSection(targetId);
-         setIsMobileMenuOpen(false);
-       }
+      const targetId = href.replace("/#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setActiveSection(targetId);
+        setIsMobileMenuOpen(false);
+      }
     } else {
-       router.push(href);
-       setIsMobileMenuOpen(false);
+      router.push(href);
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -107,20 +121,22 @@ export function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <div className="flex h-20 items-center justify-between">
-          <Link 
-            href="/#home" 
+          <Link
+            href="/#home"
             onClick={(e) => handleNavClick(e, "/#home")}
             className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-primary hover:text-accent transition-colors whitespace-nowrap"
           >
             <MountainSnow className="h-8 w-8 text-primary" />
             <span>Samuel Kuria</span>
           </Link>
-          
+
           <div className="flex items-center space-x-2 md:space-x-4">
             <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
               <TooltipProvider>
                 {navItems.map((item) => {
-                  const isActive = activeSection === item.href.replace("/#", "") && pathname === "/";
+                  const isActive =
+                    activeSection === item.href.replace("/#", "") &&
+                    pathname === "/";
                   return (
                     <Tooltip key={item.name}>
                       <TooltipTrigger asChild>
@@ -128,8 +144,8 @@ export function Header() {
                           href={item.href}
                           onClick={(e) => handleNavClick(e, item.href)}
                           className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
-                            isActive 
-                              ? "text-foreground" 
+                            isActive
+                              ? "text-foreground"
                               : "text-muted-foreground hover:text-foreground"
                           }`}
                         >
@@ -137,9 +153,13 @@ export function Header() {
                             {item.icon}
                             <span>{item.name}</span>
                           </span>
-                          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-foreground transform ${
-                            isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                          } transition-transform duration-300 ease-out`}></span>
+                          <span
+                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-foreground transform ${
+                              isActive
+                                ? "scale-x-100"
+                                : "scale-x-0 group-hover:scale-x-100"
+                            } transition-transform duration-300 ease-out`}
+                          ></span>
                         </Link>
                       </TooltipTrigger>
                       <TooltipContent>
@@ -161,14 +181,16 @@ export function Header() {
                     <span className="sr-only">Open menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent 
-                  side="right" 
+                <SheetContent
+                  side="right"
                   className="w-[280px] p-6 bg-background"
                 >
                   <div className="flex flex-col space-y-6 mt-8">
                     <AnimatePresence mode="wait">
                       {navItems.map((item, index) => {
-                        const isActive = activeSection === item.href.replace("/#", "") && pathname === "/";
+                        const isActive =
+                          activeSection === item.href.replace("/#", "") &&
+                          pathname === "/";
                         return (
                           <motion.div
                             key={item.name}
@@ -183,22 +205,22 @@ export function Header() {
                                 href={item.href}
                                 onClick={(e) => handleNavClick(e, item.href)}
                                 className={`flex items-center space-x-3 py-2 text-lg font-medium transition-colors ${
-                                  isActive 
-                                    ? "text-accent" 
+                                  isActive
+                                    ? "text-accent"
                                     : "text-foreground hover:text-accent"
                                 }`}
                               >
                                 <motion.span
                                   initial={{ scale: 0.8, opacity: 0 }}
                                   animate={{ scale: 1, opacity: 1 }}
-                                  exit={{ 
-                                    scale: 0.8, 
+                                  exit={{
+                                    scale: 0.8,
                                     opacity: 0,
                                     transition: {
                                       delay: (4 - index) * 0.12 + 0.05,
                                       duration: 0.6,
-                                      ease: [0.4, 0, 0.2, 1]
-                                    }
+                                      ease: [0.4, 0, 0.2, 1],
+                                    },
                                   }}
                                 >
                                   {item.icon}
@@ -210,21 +232,23 @@ export function Header() {
                         );
                       })}
                     </AnimatePresence>
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ 
-                        opacity: 0, 
+                      exit={{
+                        opacity: 0,
                         y: 20,
                         transition: {
                           delay: 0.1,
                           duration: 0.6,
-                          ease: [0.4, 0, 0.2, 1]
-                        }
+                          ease: [0.4, 0, 0.2, 1],
+                        },
                       }}
                       className="pt-4 border-t border-border"
                     >
-                      <p className="text-sm text-muted-foreground mb-2">Theme</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Theme
+                      </p>
                       <ThemeToggleButton />
                     </motion.div>
                   </div>

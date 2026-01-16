@@ -33,14 +33,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-widest border-y-4 border-foreground py-4 inline-block mb-8">
-            <Suspense
-              fallback={
-                <div className="h-10 w-48 bg-gray-300 animate-pulse rounded">
-                  Samuel Kuria
-                </div>
-              }
-            >
+          <h2 className="text-sm md:text-2xl lg:text-4xl font-bold uppercase tracking-widest border-y-4 border-foreground py-4 inline-block mb-26 lg:mb-20">
+            <Suspense fallback={<div>Samuel Kuria</div>}>
               <TypewriterComponent />
             </Suspense>
           </h2>

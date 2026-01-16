@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const TypewriterComponent = () => {
   return (
-    <div className="text-xl font-bold">
+    <div className="text-sm lg:text-xl font-bold">
       <Typewriter
         options={{
           strings: [
