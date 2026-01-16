@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
+import TypewriterComponent from "../TypewriterComponent";
+import { Suspense } from "react";
 
 export function HeroSection() {
   return (
@@ -32,7 +34,15 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-widest border-y-4 border-foreground py-4 inline-block mb-8">
-            Samuel Kuria
+            <Suspense
+              fallback={
+                <div className="h-10 w-48 bg-gray-300 animate-pulse rounded">
+                  Samuel Kuria
+                </div>
+              }
+            >
+              <TypewriterComponent />
+            </Suspense>
           </h2>
         </motion.div>
 
