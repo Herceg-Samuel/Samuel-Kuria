@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -15,9 +14,12 @@ export function AboutMeSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary">
+            About Me
+          </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Discover more about my journey, interests, and the tech I love to work with.
+            Discover more about my journey, interests, and the tech I love to
+            work with.
           </p>
         </motion.div>
 
@@ -30,19 +32,37 @@ export function AboutMeSection() {
             className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl text-center md:text-left mx-auto md:mx-0"
           >
             <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden shadow-2xl mb-8 border-4 border-primary bg-muted">
-              <Image src="/images/samuel.jpg" alt="Samuel Kuria" fill={true} style={{objectFit:"cover"}} data-ai-hint="portrait developer" />
+              <Image
+                src="/images/samuel.png"
+                alt="Samuel Kuria"
+                fill={true}
+                style={{ objectFit: "cover" }}
+                data-ai-hint="portrait developer"
+              />
             </div>
             <p>
-              Hey there! I&apos;m Samuel Kuria .  Software developer by day, armchair philosopher by night, and aspiring poet somewhere in between. I spend most of my time wrangling <strong className="text-primary font-semibold">React</strong> components, experimenting with <strong className="text-primary font-semibold">Next.js</strong>, and occasionally having deep existential conversations with my terminal.
+              Hey there! I&apos;m Samuel Kuria . Software developer by day,
+              armchair philosopher by night, and aspiring poet somewhere in
+              between. I spend most of my time wrangling{" "}
+              <strong className="text-primary font-semibold">React</strong>{" "}
+              components, experimenting with{" "}
+              <strong className="text-primary font-semibold">Next.js</strong>,
+              and occasionally having deep existential conversations with my
+              terminal.
             </p>
             {/* <p>
               My toolbox includes <strong className="text-primary font-semibold">Node.js</strong>, <strong className="text-primary font-semibold">MongoDB</strong>, <strong className="text-primary font-semibold">SQL</strong>, and <strong className="text-primary font-semibold">Firebase</strong> — or as I like to call it, the full-stack survival kit. But I&apos;m not just here to build shiny UIs; I&apos;m here to craft digital experiences that feel intuitive, human, and maybe even a little meaningful.
             </p> */}
             <p>
-              When I&apos;m not coding, you&apos;ll find me lost in thought about consciousness, scribbling poems that may or may not make sense, or reading something that completely rewires my brain (in the best way). I believe good tech, like good writing, should bring people closer together.
+              When I&apos;m not coding, you&apos;ll find me lost in thought
+              about consciousness, scribbling poems that may or may not make
+              sense, or reading something that completely rewires my brain (in
+              the best way). I believe good tech, like good writing, should
+              bring people closer together.
             </p>
             <p>
-              That&apos;s what I&apos;m here to build, one thoughtful project at a time.
+              That&apos;s what I&apos;m here to build, one thoughtful project at
+              a time.
             </p>
           </motion.div>
         </div>
