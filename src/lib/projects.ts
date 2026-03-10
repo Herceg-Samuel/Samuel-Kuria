@@ -15,15 +15,15 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "project-1",
-    slug: "blog",
-    title: "Blog",
+    slug: "beyond unreasonable",
+    title: "Beyond Unreasonable",
     description:
-      "A quiet corner of the internet where I finally show up.For years, my writing lived in scattered notes and whispered drafts. Now it’s here — a home for my dev journey, maybe a sprinkle of psychology too (we'll see 😅).",
+      "A game inspired by Veritassium. It seeks to challenge confidence levels while answering questions. Questions given are random and have a wide variety of unreasonable questions. Scoring is based on weight of question, correctness and confidence. More of a put your money where your mouth is kinda thing.",
     imageUrl:
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
-    liveLink: "https://the-identified-blog.vercel.app/",
+    technologies: ["Nextjs", "Typescript", "Cron jobs"],
+    liveLink: "https://beyond-unreasonable.vercel.app/",
   },
   {
     id: "project-2",
@@ -128,7 +128,7 @@ export const projectsData: Project[] = [
     slug: "the-oracle",
     title: "The Oracle",
     description:
-      "A text to speech application powered by the browser. Inspired by Wes Bos.",
+      "A speech to text application powered by the browser. Inspired by Wes Bos.",
     imageUrl:
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
@@ -146,5 +146,29 @@ export const projectsData: Project[] = [
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Javascript", "CSS"],
     liveLink: "https://thevoices-nine.vercel.app/",
+  },
+  {
+    id: "project-12",
+    slug: "blog",
+    title: "Blog",
+    description:
+      "A quiet corner of the internet where I finally show up.For years, my writing lived in scattered notes and whispered drafts. Now it’s here — a home for my dev journey, maybe a sprinkle of psychology too (we'll see 😅).",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    liveLink: "https://the-identified-blog.vercel.app/",
+  },
+  {
+    id: "project-13",
+    slug: "career advisor",
+    title: "Career Advisor",
+    description:
+      "A career guidance application to help users navigate their professional paths. It uses concepts of knowledge bases, backward and forward chaining and rules and inference engines to give the best career path. ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript", "React"],
+    liveLink: "https://the-identified-blog.vercel.app/",
   },
 ];
