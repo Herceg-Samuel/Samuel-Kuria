@@ -169,6 +169,6 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Tailwind CSS", "JavaScript", "React"],
-    liveLink: "https://the-identified-blog.vercel.app/",
+    liveLink: "https://career-advisor-jade.vercel.app/",
   },
 ];
