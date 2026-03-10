@@ -15,7 +15,7 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: "project-1",
-    slug: "beyond unreasonable",
+    slug: "beyond-unreasonable",
     title: "Beyond Unreasonable",
     description:
       "A game inspired by Veritassium. It seeks to challenge confidence levels while answering questions. Questions given are random and have a wide variety of unreasonable questions. Scoring is based on weight of question, correctness and confidence. More of a put your money where your mouth is kinda thing.",
@@ -161,7 +161,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "project-13",
-    slug: "career advisor",
+    slug: "career-advisor",
     title: "Career Advisor",
     description:
       "A career guidance application to help users navigate their professional paths. It uses concepts of knowledge bases, backward and forward chaining and rules and inference engines to give the best career path. ",
