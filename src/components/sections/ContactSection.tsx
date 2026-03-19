@@ -81,6 +81,9 @@ export function ContactSection() {
             Whether it is a project, a collaboration, or a curious question, I am
             always open to thoughtful ideas.
           </p>
+          <div className="mt-6 flex justify-center">
+            <span className="ink-stamp">Open Line</span>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">

@@ -189,6 +189,10 @@
     @apply rounded-full border border-foreground/10 bg-background/70 px-3 py-2 backdrop-blur;
   }
 
+  .ink-stamp {
+    @apply inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-3 py-1 text-[0.6rem] uppercase tracking-[0.35em] text-foreground/70;
+  }
+
   .story-paper {
     @apply relative rounded-[2rem] border border-foreground/15 bg-card;
     isolation: isolate;

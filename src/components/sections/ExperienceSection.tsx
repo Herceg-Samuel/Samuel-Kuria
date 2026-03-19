@@ -91,6 +91,9 @@ export function ExperienceSection() {
           <p className="section-subtitle">
             Work, experiments, and the questions that shaped my approach.
           </p>
+          <div className="mt-6 flex justify-center">
+            <span className="ink-stamp">Field Log</span>
+          </div>
         </motion.div>
 
         <div className="relative grid gap-12 lg:grid-cols-[140px_1fr]">

@@ -60,7 +60,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {project.title}
           </h3>
         </Link>
-        <p className="text-foreground/80 font-medium mb-6 line-clamp-3">{project.description}</p>
+        <p className="text-foreground/80 font-medium mb-4 line-clamp-3">
+          {project.description}
+        </p>
+        <p className="text-sm text-foreground/70 opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
+          <span className="mr-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            Why
+          </span>
+          {project.why}
+        </p>
         
         <div className="mt-auto">
           <div className="flex flex-wrap gap-2 mb-6">
