@@ -20,9 +20,10 @@ export function HeroSection() {
           transition={{ duration: 0.5, ease: "circOut" }}
           className="mb-8"
         >
+          <p className="section-kicker mb-4">Curiosity-led Developer</p>
           <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8] break-words">
             <span className="block">Samuel</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/70 stroke-foreground mt-2">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/60 stroke-foreground mt-2">
               Kuria
             </span>
           </h1>
@@ -33,7 +34,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-sm md:text-2xl lg:text-4xl font-bold uppercase tracking-widest border-y-4 border-foreground py-4 inline-block mb-26 lg:mb-20">
+          <h2 className="text-xs md:text-xl lg:text-3xl font-semibold uppercase tracking-[0.35em] border-y border-foreground/30 py-4 inline-block mb-26 lg:mb-20">
             <Suspense fallback={<div>Samuel Kuria</div>}>
               <TypewriterComponent />
             </Suspense>
@@ -44,7 +45,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-6 max-w-2xl mx-auto text-xl md:text-2xl font-medium text-foreground leading-tight"
+          className="mt-6 max-w-2xl mx-auto text-lg md:text-2xl font-medium text-foreground/90 leading-relaxed"
         >
           Web Developer. Choosing{" "}
           <span className="font-black underline decoration-4 underline-offset-4">
@@ -63,7 +64,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="h-16 px-10 text-xl md:text-2xl font-black uppercase rounded-none border-4 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground hover:border-foreground transition-all duration-300 active:scale-95"
+            className="h-14 px-8 text-sm md:text-base font-semibold uppercase tracking-[0.25em] rounded-full border border-foreground/40 bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300 active:scale-95"
           >
             <Link href="#projects">View Work</Link>
           </Button>
@@ -71,7 +72,7 @@ export function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="h-16 px-10 text-xl md:text-2xl font-black uppercase rounded-none border-4 border-foreground bg-background text-foreground hover:bg-foreground hover:text-background transition-all duration-300 active:scale-95"
+            className="h-14 px-8 text-sm md:text-base font-semibold uppercase tracking-[0.25em] rounded-full border border-foreground/40 bg-background text-foreground hover:bg-foreground hover:text-background transition-all duration-300 active:scale-95"
           >
             <Link href="#contact">Get In Touch</Link>
           </Button>

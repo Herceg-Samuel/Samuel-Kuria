@@ -17,7 +17,7 @@ const containerVariants = {
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-background">
+    <section id="projects" className="section-shell bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,8 +26,9 @@ export function ProjectsSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">My Projects</h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="section-kicker">Selected Work</p>
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">
             A selection of my work, showcasing my skills in web development and my interests.
           </p>
         </motion.div>

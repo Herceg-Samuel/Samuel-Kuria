@@ -3,16 +3,24 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  HomeIcon,
-  UserCircle,
+  Compass,
+  BookOpen,
+  Sparkles,
   Briefcase,
   Mail,
   MountainSnow,
-  Zap,
   Menu as MenuIcon,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "./ui/sheet";
 import { useState, useEffect } from "react";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import {
@@ -23,11 +31,11 @@ import {
 } from "./ui/tooltip";
 
 const navItems = [
-  { name: "Home", href: "/#home", icon: <HomeIcon size={18} /> },
-  { name: "About", href: "/#about", icon: <UserCircle size={18} /> },
-  { name: "Skills", href: "/#skills", icon: <Zap size={18} /> },
-  { name: "Projects", href: "/#projects", icon: <Briefcase size={18} /> },
-  { name: "Contact", href: "/#contact", icon: <Mail size={18} /> },
+  { name: "Start", href: "/#home", icon: <Compass size={16} /> },
+  { name: "Story", href: "/#about", icon: <BookOpen size={16} /> },
+  { name: "Path", href: "/#experience", icon: <Sparkles size={16} /> },
+  { name: "Work", href: "/#projects", icon: <Briefcase size={16} /> },
+  { name: "Connect", href: "/#contact", icon: <Mail size={16} /> },
 ];
 
 const menuVariants = {
@@ -117,21 +125,28 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md shadow-md"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-foreground/10 bg-background/70 backdrop-blur-xl"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <div className="flex h-20 items-center justify-between">
           <Link
             href="/#home"
             onClick={(e) => handleNavClick(e, "/#home")}
-            className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-primary hover:text-accent transition-colors whitespace-nowrap"
+            className="flex items-center space-x-3 text-lg md:text-xl font-semibold text-primary hover:text-accent transition-colors whitespace-nowrap"
           >
-            <MountainSnow className="h-8 w-8 text-primary" />
-            <span>Samuel Kuria</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/20 bg-background text-primary">
+              <MountainSnow className="h-5 w-5" />
+            </span>
+            <span className="leading-none">
+              <span className="block text-sm uppercase tracking-[0.3em] text-muted-foreground">
+                Samuel
+              </span>
+              <span className="block text-xl font-semibold">Kuria</span>
+            </span>
           </Link>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+            <nav className="hidden md:flex items-center space-x-3 lg:space-x-4 nav-pill">
               <TooltipProvider>
                 {navItems.map((item) => {
                   const isActive =
@@ -143,7 +158,7 @@ export function Header() {
                         <Link
                           href={item.href}
                           onClick={(e) => handleNavClick(e, item.href)}
-                          className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
+                          className={`relative px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition-colors group ${
                             isActive
                               ? "text-foreground"
                               : "text-muted-foreground hover:text-foreground"
@@ -154,12 +169,10 @@ export function Header() {
                             <span>{item.name}</span>
                           </span>
                           <span
-                            className={`absolute bottom-0 left-0 w-full h-0.5 bg-foreground transform ${
-                              isActive
-                                ? "scale-x-100"
-                                : "scale-x-0 group-hover:scale-x-100"
-                            } transition-transform duration-300 ease-out`}
-                          ></span>
+                            className={`absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-foreground transition-opacity duration-300 ${
+                              isActive ? "opacity-100" : "opacity-0"
+                            }`}
+                          />
                         </Link>
                       </TooltipTrigger>
                       <TooltipContent>
@@ -171,20 +184,33 @@ export function Header() {
               </TooltipProvider>
             </nav>
 
-            <ThemeToggleButton />
+            <div className="nav-pill">
+              <ThemeToggleButton />
+            </div>
 
             <div className="md:hidden">
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full border border-foreground/20 bg-background/70"
+                    aria-label="Open menu"
+                  >
                     <MenuIcon />
                     <span className="sr-only">Open menu</span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="w-[280px] p-6 bg-background"
+                  className="w-[300px] p-6 bg-background"
                 >
+                  <SheetHeader className="sr-only">
+                    <SheetTitle>Site navigation</SheetTitle>
+                    <SheetDescription>
+                      Browse the main sections of the portfolio.
+                    </SheetDescription>
+                  </SheetHeader>
                   <div className="flex flex-col space-y-6 mt-8">
                     <AnimatePresence mode="wait">
                       {navItems.map((item, index) => {
@@ -204,7 +230,7 @@ export function Header() {
                               <Link
                                 href={item.href}
                                 onClick={(e) => handleNavClick(e, item.href)}
-                                className={`flex items-center space-x-3 py-2 text-lg font-medium transition-colors ${
+                                className={`flex items-center space-x-3 py-2 text-sm font-semibold uppercase tracking-[0.25em] transition-colors ${
                                   isActive
                                     ? "text-accent"
                                     : "text-foreground hover:text-accent"

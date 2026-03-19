@@ -1,1 +1,1 @@
-TODO: Add typing effect with different words eg Software, poerty, etc
+TODO: ADD SUITABLE IMAGES FOR PROJECTS AND FRAMEWORKS

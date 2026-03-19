@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function AboutMeSection() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-muted/30">
+    <section id="about" className="section-shell bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,10 +14,9 @@ export function AboutMeSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">
-            About Me
-          </h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="section-kicker">Bio</p>
+          <h2 className="section-title">About Me</h2>
+          <p className="section-subtitle">
             Discover more about my journey, interests, and the tech I love to
             work with.
           </p>
@@ -29,9 +28,9 @@ export function AboutMeSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl text-center md:text-left mx-auto md:mx-0"
+            className="paper-card space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl text-center md:text-left mx-auto md:mx-0 p-8"
           >
-            <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden shadow-2xl mb-8 border-4 border-primary bg-muted">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden shadow-2xl mb-8 border border-foreground/20 bg-muted">
               <Image
                 src="/images/samuel.png"
                 alt="Samuel Kuria"
