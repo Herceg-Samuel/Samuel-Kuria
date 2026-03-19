@@ -31,12 +31,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     <motion.div
       variants={cardVariants}
       custom={index}
-      className="group bg-card border-4 border-foreground rounded-none overflow-hidden transition-all duration-300 hover:-translate-y-2 relative"
+      className="group paper-card overflow-hidden transition-all duration-300 hover:-translate-y-2 relative"
     >
       {/* Heavy shadow block effect via pseudo-element simulation or just pure border style */}
       <div className="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       
-      <Link href={`/projects/${project.slug}`} className="block relative w-full h-64 border-b-4 border-foreground overflow-hidden">
+      <Link
+        href={`/projects/${project.slug}`}
+        className="block relative w-full h-64 border-b border-foreground/10 overflow-hidden"
+      >
         <Image
           src={project.imageUrl}
           alt={project.title}
@@ -49,24 +52,35 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </Link>
 
       <div className="p-6 flex flex-col flex-grow">
-        <Link href={`/projects/${project.slug}`} className="group-hover:underline decoration-4 decoration-foreground">
-            <h3 className="text-3xl font-black uppercase text-foreground mb-3 leading-none tracking-tighter">{project.title}</h3>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="group-hover:underline decoration-2 decoration-foreground/50"
+        >
+          <h3 className="text-2xl font-semibold text-foreground mb-3 leading-tight">
+            {project.title}
+          </h3>
         </Link>
         <p className="text-foreground/80 font-medium mb-6 line-clamp-3">{project.description}</p>
         
         <div className="mt-auto">
           <div className="flex flex-wrap gap-2 mb-6">
             {project.technologies.slice(0, 3).map((tech) => (
-              <span key={tech} className="px-2 py-1 text-xs font-bold uppercase border border-foreground text-foreground bg-transparent">
+              <span key={tech} className="chip">
                 {tech}
               </span>
             ))}
             {project.technologies.length > 3 && (
-                <span className="px-2 py-1 text-xs font-bold uppercase border border-foreground text-foreground bg-transparent">+{project.technologies.length - 3}</span>
+              <span className="chip">
+                +{project.technologies.length - 3}
+              </span>
             )}
           </div>
           
-          <Button asChild size="lg" className="w-full rounded-none font-black uppercase border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300">
+          <Button
+            asChild
+            size="lg"
+            className="w-full rounded-full font-semibold uppercase tracking-[0.25em] border border-foreground/40 bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300"
+          >
             <Link href={`/projects/${project.slug}`}>
                Explore
             </Link>

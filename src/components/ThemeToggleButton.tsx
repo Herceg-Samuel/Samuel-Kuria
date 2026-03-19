@@ -6,12 +6,6 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export function ThemeToggleButton() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -29,27 +23,19 @@ export function ThemeToggleButton() {
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" aria-label="Toggle theme">
-          {resolvedTheme === 'dark' ? 
-            <Moon className="h-[1.2rem] w-[1.2rem] transition-all" /> : 
-            <Sun className="h-[1.2rem] w-[1.2rem] transition-all" />
-          }
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="ghost"
+      size="icon"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      className="rounded-full border border-foreground/10 bg-background/70"
+    >
+      {resolvedTheme === "dark" ? (
+        <Moon className="h-[1.1rem] w-[1.1rem]" />
+      ) : (
+        <Sun className="h-[1.1rem] w-[1.1rem]" />
+      )}
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
 }

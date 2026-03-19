@@ -66,7 +66,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-background">
+    <section id="contact" className="section-shell bg-muted/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,9 +75,11 @@ export function ContactSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">Get In Touch</h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Have a project in mind, a question, or just want to connect? Feel free to reach out!
+          <p className="section-kicker">Contact</p>
+          <h2 className="section-title">Start a Conversation</h2>
+          <p className="section-subtitle">
+            Whether it is a project, a collaboration, or a curious question, I am
+            always open to thoughtful ideas.
           </p>
         </motion.div>
 
@@ -88,31 +90,56 @@ export function ContactSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <Card className="shadow-xl rounded-lg">
+            <Card className="paper-card">
               <CardHeader>
-                <CardTitle className="text-3xl text-primary">Send me a message</CardTitle>
+                <CardTitle className="text-3xl text-primary">Send a note</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name" className="text-base">Full Name</Label>
-                    <Input id="name" name="name" type="text" placeholder="Your Name" required className="mt-2 text-base"/>
+                    <Label htmlFor="name" className="text-base">Your name</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="What should I call you?"
+                      required
+                      className="mt-2 text-base"
+                    />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-base">Email Address</Label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="mt-2 text-base"/>
+                    <Label htmlFor="email" className="text-base">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="you@example.com"
+                      required
+                      className="mt-2 text-base"
+                    />
                   </div>
                   <div>
-                    <Label htmlFor="message" className="text-base">Message</Label>
-                    <Textarea id="message" name="message" placeholder="Your message here..." rows={5} required className="mt-2 text-base"/>
+                    <Label htmlFor="message" className="text-base">Your message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about the idea, the problem, or the experiment."
+                      rows={5}
+                      required
+                      className="mt-2 text-base"
+                    />
                   </div>
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-3" disabled={isLoading}>
+                  <Button
+                    type="submit"
+                    className="w-full rounded-full border border-foreground/30 bg-foreground text-background text-sm uppercase tracking-[0.25em] py-3 hover:bg-background hover:text-foreground"
+                    disabled={isLoading}
+                  >
                     {isLoading ? (
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                     ) : (
                       <Send className="mr-2 h-5 w-5" />
                     )}
-                    {isLoading ? "Sending..." : "Send Message"}
+                    {isLoading ? "Sending..." : "Send Note"}
                   </Button>
                 </form>
               </CardContent>
@@ -127,9 +154,9 @@ export function ContactSection() {
             className="space-y-6 pt-4 lg:pt-0"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-primary mb-4">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">Direct lines</h3>
               <p className="text-base md:text-lg text-foreground/90">
-                You can also reach me directly through the following channels:
+                Prefer a direct route? These are the best ways to reach me.
               </p>
             </div>
             
@@ -149,7 +176,9 @@ export function ContactSection() {
               </div>
 
               <div className="pt-2">
-                <p className="text-sm text-muted-foreground mb-3">Or connect on social media:</p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Or say hello on social media:
+                </p>
                 <div className="flex items-center space-x-4 mt-2">
                   <Link href="https://www.linkedin.com/in/samuel-kuria-0594b7345" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="group">
                     <div className="p-2.5 bg-foreground text-background rounded-full group-hover:scale-110 transition-transform duration-200 ease-in-out">
@@ -177,4 +206,3 @@ export function ContactSection() {
     </section>
   );
 }
-

@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Pure White */
-    --foreground: 0 0% 0%; /* Pure Black */
+    --background: 36 45% 96%;
+    --foreground: 220 22% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 36 45% 98%;
+    --card-foreground: 220 22% 14%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 36 45% 98%;
+    --popover-foreground: 220 22% 14%;
 
-    --primary: 0 0% 0%; /* Black */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 220 22% 14%;
+    --primary-foreground: 36 45% 96%;
 
-    --secondary: 0 0% 90%; /* Light Gray for contrast */
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 36 28% 90%;
+    --secondary-foreground: 220 22% 14%;
 
-    --muted: 0 0% 96%; /* Very light gray */
-    --muted-foreground: 0 0% 40%; /* Mid gray */
+    --muted: 36 30% 90%;
+    --muted-foreground: 220 12% 40%;
 
-    --accent: 0 0% 90%; /* Gray */
-    --accent-foreground: 0 0% 0%;
+    --accent: 28 55% 55%;
+    --accent-foreground: 220 22% 14%;
 
-    --destructive: 0 0% 0%; 
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 36 45% 96%;
 
-    --border: 0 0% 0%; 
-    --input: 0 0% 100%;
-    --ring: 0 0% 0%;
+    --border: 220 16% 20%;
+    --input: 36 45% 96%;
+    --ring: 220 22% 14%;
 
-    --radius: 0rem;
+    --radius: 0.75rem;
 
     /* Keeping charts distinct but monochrome-ish or keeping default for now as it wasn't specified to remove charts */
     --chart-1: 0 0% 20%;
@@ -53,33 +53,33 @@
 
   .dark {
     
-    --background: 0 0% 0%; /* Pure Black */
-    --foreground: 0 0% 100%; /* Pure White */
+    --background: 220 20% 10%;
+    --foreground: 36 25% 92%;
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 20% 12%;
+    --card-foreground: 36 25% 92%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 36 25% 92%;
 
-    --primary: 0 0% 100%; /* White */
-    --primary-foreground: 0 0% 0%; /* Black */
+    --primary: 36 25% 92%;
+    --primary-foreground: 220 20% 10%;
 
-    --secondary: 0 0% 15%; /* Dark Gray */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 36 25% 92%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 36 10% 70%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 50% 58%;
+    --accent-foreground: 220 20% 10%;
 
-    --destructive: 0 0% 100%; /* White error? or maybe allow red? sticking to request */
-    --destructive-foreground: 0 0% 0%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 220 20% 10%;
 
-    --border: 0 0% 100%; /* White borders */
-    --input: 0 0% 10%;
-    --ring: 0 0% 100%;
+    --border: 36 15% 85%;
+    --input: 220 20% 12%;
+    --ring: 36 25% 92%;
 
     /* Charts grayscale inverse */
     --chart-1: 0 0% 80%;
@@ -108,10 +108,84 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-manrope), sans-serif;
+    background-image:
+      radial-gradient(
+        circle at 20% 20%,
+        hsl(var(--accent) / 0.18),
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 80% 10%,
+        hsl(var(--accent) / 0.12),
+        transparent 40%
+      ),
+      linear-gradient(180deg, transparent 0%, hsl(var(--muted) / 0.2) 100%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-fraunces), serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer base {
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        hsl(var(--foreground) / 0.03) 0,
+        hsl(var(--foreground) / 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        hsl(var(--foreground) / 0.02) 0,
+        hsl(var(--foreground) / 0.02) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    opacity: 0.6;
+    z-index: 0;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply relative py-20 lg:py-28;
+  }
+
+  .section-kicker {
+    @apply text-xs uppercase tracking-[0.4em] text-muted-foreground;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-semibold text-primary;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-lg text-foreground/80 max-w-2xl mx-auto;
+  }
+
+  .paper-card {
+    @apply rounded-2xl border border-foreground/10 bg-card shadow-[0_18px_40px_-28px_hsl(var(--foreground)/0.35)];
+  }
+
+  .ink-button {
+    @apply rounded-full border border-foreground/40 bg-foreground px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .chip {
+    @apply rounded-full border border-foreground/20 bg-foreground/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-foreground/70;
+  }
+
+  .nav-pill {
+    @apply rounded-full border border-foreground/10 bg-background/70 px-3 py-2 backdrop-blur;
   }
 }

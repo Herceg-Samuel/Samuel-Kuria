@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutMeSection } from "@/components/sections/AboutMeSection";
-import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import type { Metadata } from "next";
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
         {/* Add padding-top to account for fixed header */}
         <HeroSection />
         <AboutMeSection />
-        <SkillsSection />
+        <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
       </main>
