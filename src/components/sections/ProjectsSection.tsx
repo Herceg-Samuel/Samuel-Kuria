@@ -31,6 +31,9 @@ export function ProjectsSection() {
           <p className="section-subtitle">
             A selection of my work, showcasing my skills in web development and my interests.
           </p>
+          <div className="mt-6 flex justify-center">
+            <span className="ink-stamp">Field Notes</span>
+          </div>
         </motion.div>
         <motion.div
           variants={containerVariants}
@@ -43,6 +46,15 @@ export function ProjectsSection() {
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </motion.div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="#contact"
+            className="ink-button"
+          >
+            Start a Project
+          </a>
+        </div>
       </div>
     </section>
   );

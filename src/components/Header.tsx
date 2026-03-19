@@ -138,10 +138,15 @@ export function Header() {
               <MountainSnow className="h-5 w-5" />
             </span>
             <span className="leading-none">
-              <span className="block text-sm uppercase tracking-[0.3em] text-muted-foreground">
+              <span className="block text-[0.65rem] uppercase tracking-[0.45em] text-muted-foreground">
                 Samuel
               </span>
-              <span className="block text-xl font-semibold">Kuria</span>
+              <span className="block text-xl md:text-2xl font-semibold tracking-tight">
+                Kuria
+              </span>
+              <span className="block text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground/70">
+                Field Notes
+              </span>
             </span>
           </Link>
 

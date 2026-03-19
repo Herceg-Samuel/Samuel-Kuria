@@ -91,28 +91,40 @@ export function ExperienceSection() {
           <p className="section-subtitle">
             Work, experiments, and the questions that shaped my approach.
           </p>
+          <div className="mt-6 flex justify-center">
+            <span className="ink-stamp">Field Log</span>
+          </div>
         </motion.div>
 
-        <div className="relative grid gap-12 lg:grid-cols-[120px_1fr]">
+        <div className="relative grid gap-12 lg:grid-cols-[140px_1fr]">
           <div className="relative hidden lg:block">
             <div
               data-exp-line
               className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-foreground/20"
             />
+            <div className="absolute left-1/2 top-0 -translate-x-1/2">
+              <div className="rounded-full border border-foreground/20 bg-background px-3 py-1 text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground">
+                Timeline
+              </div>
+            </div>
           </div>
 
           <div className="space-y-10">
-            {experienceData.map((item) => (
+            {experienceData.map((item, index) => (
               <div
                 key={item.id}
-                className="relative lg:pl-8"
+                className="relative lg:pl-10"
                 data-exp-card
               >
-                <div className="paper-card flex flex-col gap-4 p-6">
-                  <div className="flex flex-col gap-1">
-                    <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                <div className="story-paper flex flex-col gap-4 p-6 md:p-8">
+                  <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                    <span className="rounded-full border border-foreground/15 bg-background px-3 py-1">
                       {item.dates}
-                    </div>
+                    </span>
+                    <span>Chapter {String(index + 1).padStart(2, "0")}</span>
+                  </div>
+
+                  <div className="flex flex-col gap-1">
                     <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
                       {item.role}
                     </h3>
@@ -122,7 +134,7 @@ export function ExperienceSection() {
                     </p>
                   </div>
 
-                  <p className="text-base md:text-lg text-foreground/90">
+                  <p className="text-base md:text-lg text-foreground/90 story-dropcap">
                     {item.summary}
                   </p>
 
@@ -146,10 +158,7 @@ export function ExperienceSection() {
 
                   <div className="flex flex-wrap gap-2">
                     {item.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="chip"
-                      >
+                      <span key={tech} className="chip">
                         {tech}
                       </span>
                     ))}
@@ -158,7 +167,7 @@ export function ExperienceSection() {
 
                 <span
                   data-exp-marker
-                  className="absolute -left-3 top-10 hidden h-4 w-4 rounded-full border-2 border-foreground bg-background lg:block"
+                  className="absolute -left-4 top-12 hidden h-4 w-4 rounded-full border-2 border-foreground bg-background lg:block"
                 />
               </div>
             ))}
