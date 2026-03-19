@@ -28,18 +28,22 @@ export function AboutMeSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="paper-card space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed max-w-2xl text-center md:text-left mx-auto md:mx-0 p-8"
+            className="story-paper space-y-6 text-base md:text-lg text-foreground/90 leading-relaxed max-w-3xl text-center md:text-left mx-auto md:mx-0 p-8 md:p-12"
           >
             <div className="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden shadow-2xl mb-8 border border-foreground/20 bg-muted">
               <Image
                 src="/images/samuel.png"
                 alt="Samuel Kuria"
                 fill={true}
+                sizes="(max-width: 768px) 12rem, 14rem"
                 style={{ objectFit: "cover" }}
                 data-ai-hint="portrait developer"
               />
             </div>
-            <p>
+            <p className="section-kicker text-center md:text-left">
+              Chapter One
+            </p>
+            <p className="story-dropcap">
               Hey there! I&apos;m Samuel Kuria . Software developer by day,
               armchair philosopher by night, and aspiring poet somewhere in
               between. I spend most of my time wrangling{" "}
