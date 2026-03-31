@@ -29,16 +29,16 @@ export const projectsData: Project[] = [
   },
   {
     id: "project-2",
-    slug: "vuejs-task-app",
-    title: "Vuejs Task App",
+    slug: "blog",
+    title: "Blog",
     description:
-      "A simple task app built using a new technology. I built it using Vuejs. It allows you to perform add and delete tasks. You can also mark task as done. It is a simple and easy to use task app.",
-    why: "To learn Vue by building a practical daily tool.",
+      "A quiet corner of the internet where I finally show up. For years, my writing lived in scattered notes and whispered drafts. Now it's here - a home for my dev journey, maybe a sprinkle of psychology too (we'll see...).",
+    why: "To create a home for my writing and dev reflections.",
     imageUrl:
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
-    technologies: ["Vuejs", "Pico CSS"],
-    liveLink: "https://vuejstaskapp.netlify.app/",
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    liveLink: "https://the-identified-blog.vercel.app/",
   },
   {
     id: "project-3",
@@ -64,7 +64,8 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["Figma", "UI/UX Design"],
-    liveLink: "https://www.figma.com/proto/NOKe8dLK1P5CWtdSIj7w0j/DeKUT-Student-Portal?page-id=0%3A1&node-id=1-2&p=f&viewport=-1747%2C-17%2C0.17&t=RCh2iGDUZoPuc7EG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2",
+    liveLink:
+      "https://www.figma.com/proto/NOKe8dLK1P5CWtdSIj7w0j/DeKUT-Student-Portal?page-id=0%3A1&node-id=1-2&p=f&viewport=-1747%2C-17%2C0.17&t=RCh2iGDUZoPuc7EG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2",
   },
   {
     id: "project-5",
@@ -77,7 +78,8 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["Figma", "UI/UX Design"],
-    liveLink: "https://www.figma.com/proto/w9iOtcsFFaIRQuLHO2ojzB/WEBSITE?page-id=0%3A1&node-id=15-4&p=f&viewport=65%2C479%2C0.21&t=ssyPMB9nrmSpOoCW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A4",
+    liveLink:
+      "https://www.figma.com/proto/w9iOtcsFFaIRQuLHO2ojzB/WEBSITE?page-id=0%3A1&node-id=15-4&p=f&viewport=65%2C479%2C0.21&t=ssyPMB9nrmSpOoCW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A4",
   },
   {
     id: "project-6",
@@ -159,16 +161,16 @@ export const projectsData: Project[] = [
   },
   {
     id: "project-12",
-    slug: "blog",
-    title: "Blog",
+    slug: "vuejs-task-app",
+    title: "Vuejs Task App",
     description:
-      "A quiet corner of the internet where I finally show up. For years, my writing lived in scattered notes and whispered drafts. Now it's here - a home for my dev journey, maybe a sprinkle of psychology too (we'll see...).",
-    why: "To create a home for my writing and dev reflections.",
+      "A simple task app built using a new technology. I built it using Vuejs. It allows you to perform add and delete tasks. You can also mark task as done. It is a simple and easy to use task app.",
+    why: "To learn Vue by building a practical daily tool.",
     imageUrl:
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
-    liveLink: "https://the-identified-blog.vercel.app/",
+    technologies: ["Vuejs", "Pico CSS"],
+    liveLink: "https://vuejstaskapp.netlify.app/",
   },
   {
     id: "project-13",
@@ -183,4 +185,17 @@ export const projectsData: Project[] = [
     technologies: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     liveLink: "https://career-advisor-jade.vercel.app/",
   },
-]
+  {
+    id: "project-14",
+    slug: "biometric-authenticator",
+    title: "Biometric Authenticator",
+    description:
+      "A biometric authentication application that uses fingerprint and facial recognition for secure user verification.",
+    why: "To explore the integration of biometric technologies in web applications. Group project",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["Nextjs", "Security", "Simplewebauthn"],
+    liveLink: "https://bioauth-nine.vercel.app/",
+  },
+];
