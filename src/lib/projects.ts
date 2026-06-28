@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["Nextjs", "Typescript", "Cron jobs"],
-    liveLink: "https://beyond-unreasonable.vercel.app/",
+    liveLink: "https://beyond-unreasonable.vercel.app",
   },
   {
     id: "project-2",
@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
-    liveLink: "https://the-identified-blog.vercel.app/",
+    liveLink: "https://the-identified-blog.vercel.app",
   },
   {
     id: "project-3",
@@ -51,7 +51,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "CSS", "JavaScript"],
-    liveLink: "https://bettercalc1.netlify.app/",
+    liveLink: "https://bettercalc1.netlify.app",
   },
   {
     id: "project-4",
@@ -92,7 +92,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["React", "TailwindCSS", "API"],
-    liveLink: "https://find-movies-omega.vercel.app/",
+    liveLink: "https://find-movies-omega.vercel.app",
   },
   {
     id: "project-7",
@@ -105,7 +105,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["React", "TailwindCSS", "hugging face models"],
-    liveLink: "https://chefdelight.vercel.app/",
+    liveLink: "https://chefdelight.vercel.app",
   },
   {
     id: "project-8",
@@ -118,7 +118,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Javascript", "CSS"],
-    liveLink: "https://africanmathematicalgenius.netlify.app/",
+    liveLink: "https://africanmathematicalgenius.netlify.app",
   },
   {
     id: "project-9",
@@ -131,7 +131,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Javascript", "CSS"],
-    liveLink: "https://portfoliohtml-iota.vercel.app/",
+    liveLink: "https://portfoliohtml-iota.vercel.app",
   },
   {
     id: "project-10",
@@ -144,7 +144,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["React", "Javascript", "CSS"],
-    liveLink: "https://the-oracle-pink.vercel.app/",
+    liveLink: "https://the-oracle-pink.vercel.app",
   },
   {
     id: "project-11",
@@ -157,7 +157,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Javascript", "CSS"],
-    liveLink: "https://thevoices-nine.vercel.app/",
+    liveLink: "https://thevoices-nine.vercel.app",
   },
   {
     id: "project-12",
@@ -170,7 +170,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["Vuejs", "Pico CSS"],
-    liveLink: "https://vuejstaskapp.netlify.app/",
+    liveLink: "https://vuejstaskapp.netlify.app",
   },
   {
     id: "project-13",
@@ -183,7 +183,7 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["HTML", "Tailwind CSS", "JavaScript", "React"],
-    liveLink: "https://career-advisor-jade.vercel.app/",
+    liveLink: "https://career-advisor-jade.vercel.app",
   },
   {
     id: "project-14",
@@ -196,6 +196,19 @@ export const projectsData: Project[] = [
       "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAiHint: "developer portfolio",
     technologies: ["Nextjs", "Security", "Simplewebauthn"],
-    liveLink: "https://biometric-authenticator-3wxt.vercel.app/",
+    liveLink: "https://biometric-authenticator-3wxt.vercel.app",
+  },
+  {
+    id: "project-15",
+    slug: "google-fonts-explorer",
+    title: "Google fonts Explorer",
+    description:
+      "Got really tired of hunting for google fonts in every project. Decided to just go through lots of them and consolidated them in one place. More will be added!",
+    why: "Better way of getting fonts!",
+    imageUrl:
+      "https://images.unsplash.com/photo-1672957603474-fe1d31c482e4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAiHint: "developer portfolio",
+    technologies: ["html", "css", "js"],
+    liveLink: "https://google-fonts-explorer.vercel.app",
   },
 ];
